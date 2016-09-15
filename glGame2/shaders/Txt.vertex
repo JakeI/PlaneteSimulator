@@ -1,0 +1,16 @@
+#version 330 core
+layout(location=0) in vec2 pos;
+layout(location=1) in vec2 uv;
+
+out vec2 UV;
+
+uniform vec4 fourgroundBackground[2];
+out vec4 fourground;
+out vec4 background;
+
+void main(){
+	gl_Position = vec4(pos, 0, 1);
+	fourground = fourgroundBackground[0];
+	background = fourgroundBackground[1];
+	UV = uv;
+}

@@ -1,0 +1,124 @@
+#version 330 core
+
+layout(location=0) in vec3 pos;
+layout(location=1) in vec3 norm;
+
+
+uniform mat4 MVP;
+uniform mat4 M;
+uniform mat4 V;
+uniform mat4 P;
+
+uniform vec4 color;
+
+uniform float specular;
+uniform float defuse;
+uniform float ambient;
+
+uniform vec3 lightPos;
+vec4 lightColor = vec4(1.0, 1.0, 0.0, 1.0);
+vec4 ambientLightStrength = vec4(0.2, 0.2, 0.2, 1.0);
+uniform vec3 eyePos;
+
+
+out vec4 col;
+
+
+bool eq(vec3 a, vec3 b, float epsilon)
+{
+	return a.x < b.x + epsilon && a.x > b.x - epsilon
+		&& a.y < b.y + epsilon && a.y > b.y - epsilon
+		&& a.z < b.z + epsilon && a.z > b.z - epsilon;
+}
+
+#define PI 3.141593
+
+void main()
+{
+	//Non linear Transformation Demo
+	//float factor = pos.x-floor(eyePos.x)+1;
+	//gl_Position = MVP * vec4(factor*exp(pos.x), factor*exp(pos.y), pos.z, 1);
+	
+	gl_Position = MVP * vec4(pos, 1);
+	
+	vec3 pVertCamS = (M * vec4(pos, 1)).xyz;
+	vec3 pEyeCamS = (M * vec4(eyePos, 1)).xyz;
+	vec3 pLightCamS = (M * vec4(lightPos, 1)).xyz;
+	vec3 snVertCamS = normalize((M * vec4(norm, 1)).xyz);
+	
+	vec3 vertToLight = pLightCamS - pVertCamS;
+	
+	//Defuse Lighting
+	vec3 vertToLightN = normalize(vertToLight);
+	float cosPhi = dot(snVertCamS, vertToLightN);
+	float defuseLightFactor = cosPhi;
+	
+	//Vert Cam distance lighting
+	vec3 vertToCam = pEyeCamS - pVertCamS;
+	float distVertCam = length(vertToCam);
+	float visibilityFactor = 100/(distVertCam);
+	
+	//Vert Source sitance lighting
+	float distVertLight = length(vertToLight);
+	float lightStengthFactor = 1;
+	
+	//Specular Lighting
+	vec3 E = normalize(pEyeCamS - pVertCamS);
+	vec3 R = reflect(vertToLight, snVertCamS);
+	float specularLightFactor = dot(E, R);
+	
+	col = (0.4*(	
+			ambientLightStrength + 
+			0.5*(0.3*defuseLightFactor + 0.7*specularLightFactor)
+			*lightStengthFactor*lightColor			
+		)+0.6)*color;	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	/*mat4 MV = V*M;
+	vec3 pVertCamS = (MV * vec4(pos, 1)).xyz;
+	vec3 pEyeCamS = (MV * vec4(eyePos, 1)).xyz;
+	vec3 pLightCamS = (MV * vec4(lightPos, 1)).xyz;
+	vec3 snVertCamS = normalize((MV * vec4(norm, 1)).xyz);
+	
+	vec3 vertToLight = pLightCamS - pVertCamS;
+	
+	//Defuse Lighting
+	vec3 vertToLightN = normalize(vertToLight);
+	float cosPhi = dot(snVertCamS, vertToLightN);
+	float defuseLightFactor = cosPhi;
+	
+	//Vert Cam distance lighting
+	vec3 vertToCam = pEyeCamS - pVertCamS;
+	float distVertCam = length(vertToCam);
+	float visibilityFactor = 100/(distVertCam);
+	
+	//Vert Source sitance lighting
+	float distVertLight = length(vertToLight);
+	float lightStengthFactor = exp(distVertLight)-1;
+	
+	//Specular Lighting
+	vec3 E = normalize(pEyeCamS - pVertCamS);
+	vec3 R = reflect(vertToLight, snVertCamS);
+	float specularLightFactor = dot(E, R);
+	
+	col = (0.5*(	
+			ambientLightStrength + 
+			0.5*(0.3*defuseLightFactor + 0.7*specularLightFactor)
+			*lightStengthFactor*lightColor			
+		)+0.5)*color;*/		
+}
+		
+		
+		
+		
+		

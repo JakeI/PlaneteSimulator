@@ -1,0 +1,46 @@
+#version 330 core
+
+layout(location=0) in vec2 PartPos;
+
+layout(location=1) in vec3 CenterPos;
+layout(location=2) in vec3 Norm;
+layout(location=3) in vec2 xyScale;
+layout(location=4) in float n;
+
+
+uniform mat4 MVP;
+uniform mat4 M;
+uniform mat4 V;
+uniform mat4 P;
+uniform vec3 eye;
+
+uniform float S;
+
+out vec2 uv;
+
+int main(){
+	
+	//
+	// Position
+	
+	p = PartPos*xyScale;
+	
+	zHat = vec3(0.0, 0.0, 1.0);
+	angle = dot(zHat, Norm);
+	axis = cross(zHat, Norm);
+	pos = rotate(mat4(), angle, axis)*p;
+	pos += CenterPos;
+	
+	gl_Position = MVP*vec4(pos, 1)
+
+	
+	//
+	// UV-Coords
+	
+	d = (PartPos+1)/2
+	y = floor(n/S);
+	x = n - y*S;
+	uv = (vec2(x, y)*d)/S;
+	
+	return 0;
+}

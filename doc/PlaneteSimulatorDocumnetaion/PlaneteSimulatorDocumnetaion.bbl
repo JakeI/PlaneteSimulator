@@ -1,0 +1,18 @@
+\begin{thebibliography}{1}
+
+\bibitem{NSDE}
+A.~Brinely Codd M. Fofaria T.~Shah S.~Amen, P.~Bilokon.
+\newblock Numerical solutions of differential equations.
+\newblock {\em Imperial College London}, 2004.
+
+\bibitem{KOECSV}
+René Schwarz.
+\newblock Keplerian orbital elements -> cartesian state vectors.
+\newblock {\em Rene Schwarz}, 2014.
+
+\bibitem{KEAP}
+E.~M. Standish.
+\newblock Keplerian elements for approximate positions of the major planets.
+\newblock {\em Solar Systems Dynamics Groupe (JPL)}.
+
+\end{thebibliography}

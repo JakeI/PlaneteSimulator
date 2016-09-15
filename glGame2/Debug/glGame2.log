@@ -1,0 +1,77 @@
+﻿Der Buildvorgang wurde am 11.09.2016 14:18:50 gestartet.
+     1>Projekt "C:\A\C_Programme\VC++\glGame2\glGame2\glGame2.vcxproj" auf Knoten "2", Build Ziel(e).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt Arrow.cpp Camera.cpp ColoredModle.cpp ForceField.cpp FrameBufferQuad.cpp GlobalConditions.cpp HistoryPlot.cpp KeplerCalculator.cpp LinearBars.cpp LitColoredModle.cpp Loader.cpp OnPlaneteCamera.cpp ParticleBufferShader.cpp Plain.cpp Planet.cpp PlaneteBuffer.cpp PlaneteTrace.cpp ReferenceFrame.cpp Renderer.cpp RotatableCamera.cpp Sphere.cpp StarSphere.cpp Terain.cpp TexturedModle.cpp UniformColoredModle.cpp shaders\LoadShaderProg.cpp txt.cpp
+         txt.cpp
+     1>c:\a\c_programme\vc++\glgame2\glgame2\txt.h(56): warning C4091: "static ": Ignoriert auf der linken Seite von "txt::StreamElements", wenn keine Variable deklariert wurde
+         UniformColoredModle.cpp
+         TexturedModle.cpp
+         Loader.cpp
+         Arrow.cpp
+     1>c:\a\c_programme\vc++\glgame2\glgame2\arrow.cpp(42): warning C4305: "Initialisierung": Verkürzung von "double" in "float"
+         Code wird generiert...
+         Überspringen... (keine relevanten Änderungen gefunden)
+         LoadShaderProg.cpp
+         Terain.cpp
+         StarSphere.cpp
+         Sphere.cpp
+         RotatableCamera.cpp
+         Renderer.cpp
+         ReferenceFrame.cpp
+         PlaneteTrace.cpp
+         PlaneteBuffer.cpp
+         Planet.cpp
+         Plain.cpp
+         ParticleBufferShader.cpp
+         OnPlaneteCamera.cpp
+         LitColoredModle.cpp
+         LinearBars.cpp
+         KeplerCalculator.cpp
+         HistoryPlot.cpp
+         GlobalConditions.cpp
+         FrameBufferQuad.cpp
+         ForceField.cpp
+         ColoredModle.cpp
+         Camera.cpp
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\A\C_Programme\VC++\glGame2\Debug\glGame2.exe" /INCREMENTAL /NOLOGO freeglut.lib glew32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\A\C_Programme\VC++\glGame2\Debug\glGame2.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\A\C_Programme\VC++\glGame2\Debug\glGame2.lib" /MACHINE:X86 Debug\Arrow.obj
+         Debug\ColoredModle.obj
+         Debug\CordSystem.obj
+         Debug\FrameBuffer.obj
+         Debug\FrameBufferQuad.obj
+         Debug\ForceField.obj
+         Debug\GlobalConditions.obj
+         Debug\KeplerCalculator.obj
+         Debug\LinearBars.obj
+         Debug\LitColoredModle.obj
+         Debug\Loader.obj
+         Debug\Camera.obj
+         Debug\GameShaderProg.obj
+         Debug\globals.obj
+         Debug\main.obj
+         Debug\OnPlaneteCamera.obj
+         Debug\ParticleBufferShader.obj
+         Debug\Plain.obj
+         Debug\Planet.obj
+         Debug\PlaneteBuffer.obj
+         Debug\PlanetePositionCalculator.obj
+         Debug\PlaneteTrace.obj
+         Debug\ReferenceFrame.obj
+         Debug\Renderer.obj
+         Debug\RotatableCamera.obj
+         Debug\LoadShaderProg.obj
+         Debug\Sphere.obj
+         Debug\StarSphere.obj
+         Debug\Terain.obj
+         Debug\TexturedModle.obj
+         Debug\TexturedQuad.obj
+         Debug\txt.obj
+         Debug\UniformColoredModle.obj
+         Debug\UserInput.obj
+         Debug\HistoryPlot.obj
+         glGame2.vcxproj -> C:\A\C_Programme\VC++\glGame2\Debug\glGame2.exe
+     1>Die Erstellung von Projekt "C:\A\C_Programme\VC++\glGame2\glGame2\glGame2.vcxproj" ist abgeschlossen (Build Ziel(e)).
+
+Der Buildvorgang wurde erfolgreich ausgeführt.
+
+Verstrichene Zeit 00:00:07.84

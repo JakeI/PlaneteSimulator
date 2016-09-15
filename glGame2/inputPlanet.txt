@@ -1,0 +1,17 @@
+#cartesian
+'global
+
+ColisionModel	COMBINE
+GravitationalConstant	1.0
+IncrementsPerTimeUnit	0.5
+msToTimeUnitConversionFactor	1.0
+
+Scale_l	1
+
+'data
+Name	light?	size	m	R	r_x	r_y	r_z	dx/dt	dy/dt	dz/dt	r	g	b
+A	true	l	8	1	5	0	0	0	-0.5	1	1	0	0
+B	false	l	8	1	0	0	5	-1	-0.5	0	0	1	0
+C	false	l	8	1	-5	0	0	0	-0.5	-1	0	0	1
+D	false	l	8	1	0	0	-5	1	-0.5	0	1	1	0
+E	false	l	8	1	0	-2	0	0	2	0	1	1	1
