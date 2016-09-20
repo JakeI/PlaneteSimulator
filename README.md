@@ -1,7 +1,5 @@
 
-
-	# PlaneteSimulator
-
+# PlaneteSimulator
 A simulation of the main planets in the solar system.
 
 -Uses Forward Euler to simulate planetary motion
