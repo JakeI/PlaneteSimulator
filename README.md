@@ -5,7 +5,9 @@ A simulation of the main planets in the solar system.
 * Uses Forward Euler to simulate planetary motion
 * Can be used to visualize Apparent Retrograde Motion
 
-Checkout those Clips and see a demonstration: https://youtu.be/pe5Ooj6hcBI https://youtu.be/G21DPYPPa8w 
+Checkout those Clips for see a screen cast and some additional info:
+
+[![YouTube Playlist about this project](http://img.youtube.com/vi/pe5Ooj6hcBI/0.jpg)](https://www.youtube.com/playlist?list=PL4P86szacmkXJi9gmXDzYcHW0lLGv8dQk)
 
 Here is a screenshot just to make you excited about this:
 ![Observing a Planet](doc/Presentation/ObservationMode.PNG)
